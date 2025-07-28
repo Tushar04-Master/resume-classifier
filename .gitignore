@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+*.pkl
+*.joblib
+.ipynb_checkpoints/
+
+# Environment
+venv/
+.env
+
+# Data
+data/resumes/
