@@ -4,9 +4,9 @@ import joblib
 
 @st.cache_data
 def load_model():
-    vec = joblib.load("../models/tfidf_vectorizer.pkl")
-    mdl = joblib.load("../models/xgb_best.pkl")
-    lbl = joblib.load("../models/label_encoder.pkl")
+    vec = joblib.load("models/tfidf_vectorizer.pkl")
+    mdl = joblib.load("models/xgb_best.pkl")
+    lbl = joblib.load("models/label_encoder.pkl")
     return vec, mdl, lbl
 
 st.title("Resume Classifier")

@@ -1,7 +1,6 @@
 # Python
 __pycache__/
 *.pyc
-*.pkl
 *.joblib
 .ipynb_checkpoints/
 
@@ -10,4 +9,4 @@ venv/
 .env
 
 # Data
-data/resumes/
+data/resumes/.DS_Store
