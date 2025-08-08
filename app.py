@@ -22,6 +22,16 @@ st.markdown(
 
 st.title("Resume Classifier")
 
+# Sidebar About section
+st.sidebar.header("About")
+st.sidebar.info(
+    """
+    This app predicts the category of a resume using AI/ML.  
+    Built with Python, NLP, and Scikit-learn.  
+    Upload a resume or try the sample to see it in action.
+    """
+)
+
 @st.cache_data
 def load_model():
     vec = joblib.load("models/tfidf_vectorizer.pkl")
@@ -30,7 +40,7 @@ def load_model():
     return vec, mdl, lbl
 
 def get_sample_resume():
-    sample_path = "sample_resumes/sample1.pdf"  # Update path as needed
+    sample_path = ""  # Update path as needed
     if os.path.exists(sample_path):
         with open(sample_path, "rb") as f:
             return f.read()
