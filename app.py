@@ -76,7 +76,7 @@ elif sample_clicked and selected_sample:
 
 if resume_bytes:
     text = extract_text(resume_bytes)
-    st.write("**Extracted Text:**", text[:500], "…")
+    st.text_area("Extracted Text:", text, height=300)
     vec, mdl, lbl = load_model()
     vec_clean = vec.transform([text])
     pred_proba = mdl.predict_proba(vec_clean)[0]
