@@ -3,7 +3,7 @@ from utils.pdf_extractor import extract_text
 import joblib
 
 # Layout: Two columns (Intro left, Classifier right) with padding in between
-col1, pad, col2 = st.columns([15, 30, 15])  # [width_left, padding, width_right]
+col1, pad, col2 = st.columns([15, 50, 15])  # [width_left, padding, width_right]
 
 with col1:
     st.markdown(
