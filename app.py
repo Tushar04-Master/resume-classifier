@@ -3,7 +3,7 @@ from utils.pdf_extractor import extract_text
 import joblib
 
 # Adding Welcome/Intro
-st.markown(
+st.markdown(
        """
     # 📄 AI Resume Classifier
     Welcome to the **AI-powered Resume Classifier**!  
