@@ -6,12 +6,12 @@ import joblib
 st.markdown(
        """
     # 📄 AI Resume Classifier
-    Welcome to the **AI-powered Resume Classifier**!  
+    Welcome to the **AI-POWERED Resume Classifier**!  
     Upload a resume, and our model will instantly predict the most relevant job role.  
 
     ---
     **Features**:
-    - 📂 Upload PDF/DOCX resumes
+    - 📂 Upload resumes in PDF format
     - 🤖 Machine learning classification
     - ⚡ Fast and accurate predictions
     - 📊 Clear results display
