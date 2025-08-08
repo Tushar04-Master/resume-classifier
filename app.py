@@ -26,8 +26,8 @@ st.title("Resume Classifier")
 with st.sidebar:
     st.header("ℹ️ About This Project")
     st.write("""
-    This app predicts the category of a resume using AI/ML.
-    Built with Python, NLP, and Scikit-learn.
+    This app predicts the category of a resume using Machine Learning.
+    Built with Python, Uses TF-IDF Vectorizer for cleaning the data and GridSearchCV on XGBoost.
     Upload a resume or try the sample to see it in action.
     """)
 
