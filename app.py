@@ -23,14 +23,13 @@ st.markdown(
 st.title("Resume Classifier")
 
 # Sidebar About section
-st.sidebar.header("About")
-st.sidebar.info(
-    """
-    This app predicts the category of a resume using AI/ML.  
-    Built with Python, NLP, and Scikit-learn.  
+with st.sidebar:
+    st.header("ℹ️ About This Project")
+    st.write("""
+    This app predicts the category of a resume using AI/ML.
+    Built with Python, NLP, and Scikit-learn.
     Upload a resume or try the sample to see it in action.
-    """
-)
+    """)
 
 @st.cache_data
 def load_model():
