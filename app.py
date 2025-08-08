@@ -51,8 +51,7 @@ uploaded = st.file_uploader("Upload PDF Resume", type=["pdf"])
 if uploaded is not None:
     resume_bytes = uploaded.read()  
     text = extract_text(resume_bytes)
-    st.write("Extracted text:")
-    st.write(text)
+    st.text_area("Extracted Text:", text, height=300)
 
 sample_files, sample_paths = get_sample_resumes()
 selected_sample = None
