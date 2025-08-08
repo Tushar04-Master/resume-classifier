@@ -2,8 +2,8 @@ import streamlit as st
 from utils.pdf_extractor import extract_text
 import joblib
 
-# Layout: Two columns (Intro left, Classifier right) with middle padding
-col1, pad, col2 = st.columns([850000, 5000, 450000])  # [width_left, padding, width_right]
+# Layout: Two columns (Intro left, Classifier right) with no padding
+col1, col2 = st.columns([1, 2])  # [width_left, width_right]
 
 with col1:
     st.markdown(
@@ -22,9 +22,6 @@ with col1:
         **Tip:** Use well-formatted resumes for best results.
         """
     )
-
-with pad:
-    st.write("")  # Empty column for padding
 
 with col2:
     st.title("Resume Classifier")
