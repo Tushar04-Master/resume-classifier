@@ -38,24 +38,35 @@ def load_model():
     lbl = joblib.load("models/label_encoder.pkl")
     return vec, mdl, lbl
 
-def get_sample_resume():
-    sample_path = ""  # Update path as needed
-    if os.path.exists(sample_path):
-        with open(sample_path, "rb") as f:
-            return f.read()
-    return None
+def get_sample_resumes():
+    sample_folder = "samples"
+    sample_files = [
+        f for f in os.listdir(sample_folder)
+        if f.endswith(".pdf")
+    ]
+    sample_paths = [os.path.join(sample_folder, f) for f in sample_files]
+    return sample_files, sample_paths
 
 uploaded = st.file_uploader("Upload PDF Resume", type=["pdf"])
-sample_clicked = st.button("Try a Sample Resume")
+
+sample_files, sample_paths = get_sample_resumes()
+selected_sample = None
+if sample_files:
+    selected_sample = st.selectbox("Or select a sample resume to try:", sample_files)
+    sample_clicked = st.button("Try Selected Sample Resume")
+else:
+    sample_clicked = False
 
 resume_bytes = None
 if uploaded:
     resume_bytes = uploaded
-elif sample_clicked:
-    sample = get_sample_resume()
-    if sample:
-        resume_bytes = sample
-        st.info("Loaded sample resume!")
+elif sample_clicked and selected_sample:
+    idx = sample_files.index(selected_sample)
+    sample_path = sample_paths[idx]
+    if os.path.exists(sample_path):
+        with open(sample_path, "rb") as f:
+            resume_bytes = f.read()
+        st.info(f"Loaded sample resume: {selected_sample}")
     else:
         st.error("Sample resume not found.")
 
