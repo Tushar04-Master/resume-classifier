@@ -46,6 +46,20 @@ pip install -r requirements.txt
 ### Run the Streamlit app
 streamlit run app.py
 
-## Project Structure
-resume-classifer
-    ->
+## 📊 How It Works
+	1.	Upload Resume — User selects a resume file.
+	2.	Text Extraction — Script reads the file content.
+	3.	Feature Processing — Cleaned & vectorized using TF-IDF.
+	4.	Model Prediction — Pre-trained ML model predicts job category.
+	5.	Display Result — Shows predicted role instantly.
+
+⸻
+## 📜 License
+
+This project is licensed under the MIT License.
+
+## 👤 Author
+	•	Tushar Singh
+	•	GitHub: @Tushar04-Master
+	•	LinkedIn: https://www.linkedin.com/in/tushar04-master/
+    •   X: @tushar04master
