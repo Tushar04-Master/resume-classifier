@@ -28,6 +28,8 @@ with st.sidebar:
     st.write("""
     This app predicts the category of a resume using Machine Learning.
     Built with Python, Uses TF-IDF Vectorizer for cleaning the data and GridSearchCV on XGBoost.
+    It has an accuracy of 75.05% .
+    Dataset is of 724.5mb scrapped from Kaggle.
     Upload a resume or try the sample to see it in action.
     """)
 
