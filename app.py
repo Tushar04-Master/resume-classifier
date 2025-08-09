@@ -33,7 +33,7 @@ with st.sidebar:
              
     Dataset is of 724.5mb scrapped from Kaggle.
              
-    Upload a resume or try the sample to see it in action.
+    Upload a resume or try the sample to see it in action 🔥 
     """)
 
 @st.cache_data
