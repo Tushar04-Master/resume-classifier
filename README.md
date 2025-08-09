@@ -24,7 +24,7 @@ It allows users to upload their resumes (in PDF format), extracts the text, and 
 - **Backend/Processing:** Python
 - **Machine Learning:** Scikit-learn, Pandas, NumPy Matplotlib
 - **Text Extraction:** PyPDF2 / python-docx
-- **Model:** GridSearchCV on XGBOOST
+- **Model:**  XGBOOST
 
 ---
 
@@ -63,3 +63,4 @@ This project is licensed under the MIT License.
 	•	GitHub: @Tushar04-Master
 	•	LinkedIn: https://www.linkedin.com/in/tushar04-master/
     •   X: @tushar04master
+
